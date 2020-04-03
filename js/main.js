@@ -28,6 +28,21 @@ $(document).ready(
     }
 
 
+    var redPoints = 0;
+    var greenPoints = 0;
+
+    $('.square').click(                      //ogni volta che uno dei quadrati viene cliccato...
+      function (){
+        if ( $(this).hasClass('red') && ! ( $(this).hasClass('active') ) ) {  //...se ha classe .red e non .active
+          $(this).addClass('active');                                         //...assegno classe .active
+          $('.red_score').html(++redPoints);                                  //...aggionro il punteggio (con operatore di precremento per restituire il nuovo valore)
+        }
+        else if ( $(this).hasClass('green') && ! ( $(this).hasClass('active') ) ) {   //...se ha classe .green e non .active
+          $(this).addClass('active');                                                 //...assegno classe .active
+          $('.green_score').html(++greenPoints);                                       //...aggiorno il punteggio (con operatore di precremento per restituire il nuovo valore)
+        }
+      }
+    );
 
 
 
