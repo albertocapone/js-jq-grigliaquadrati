@@ -64,12 +64,12 @@ body{
 
           .red{
             background-color: red;
-            opacity: 1;
+            /* opacity: 1; */
           }
 
           .green{
             background-color: green;
-            opacity: 1;
+            /* opacity: 1; */
           }
 
           .active{
