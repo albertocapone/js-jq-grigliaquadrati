@@ -59,7 +59,7 @@ body{
 
           .square{
             flex-basis: calc(100% / 8);
-            height: calc(100% / 8);
+            border: 1px solid gray;
           }
 
           .red{
