@@ -105,7 +105,7 @@ $(document).ready(
           else if ( $(this).hasClass('green') && ! ( $(this).hasClass('active') ) ) {   //SE invece ha classe .green ma non .active (è cioè una casella verde mai cliccata prima)
                 if (firstClick) {      //se è il primo click in assoluto del gioco
                   for (var k = $(this).index(), iterations = 0; iterations < 12; iterations++, k++){   //ciclo che lavora su due valori: k, che è l'index dello square cliccato all'interno del suo array, e iterations, che determina il numero massimo di cicli (12)
-                    if (squares[k].hasClass('green') && squares[k].text() > 0){    //se la casella individuata da k addizionato è verde e non è una casella con 0 mine intorno a se
+                    if (squares[k].hasClass('green')){    //se la casella individuata da k addizionato è verde
                       squares[k].addClass('active');                              //allora rivelala
                       greenActiveSquares++;                                      //aumenta lo score: cioè registra il numero di caselle verdi rivelate
                         if (iterations == 4){k = k + 16;}                       //quando arrivi all'iterazione numero 4 incrementa k di 16, in modo di non rivelare solo caselle sulla stessa "riga"
