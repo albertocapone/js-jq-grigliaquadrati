@@ -17,12 +17,14 @@ $(document).ready(
         return Math.floor(Math.random() * (max - min) ) + min;
       }
 
-      for (var k = 0, r = randomValues(1, 256); k < 60; r = randomValues(1, 256)){       //il ciclo lavora su due valori: k conta le iterazioni, r assegnata randomicamente accede ad un qualsisasi div nell'array squares
+      for (var k = 0; k < 60; ){       //il ciclo lavora su due valori: k conta le iterazioni, r assegnata randomicamente accede ad un qualsisasi div nell'array squares
+        var r = randomValues(1, 256);
         if (! ( squares[r].hasClass('red') ) ) {                  //questo controllo evita che venga riassegnato .red allo stesso div
           squares[r].addClass('red');                            //assegnazione di .red al div random
           k++;                                                  //incrementa k ogni volta che vine effettuata un'assegnazione; assegnati 60 .red il ciclo si interrompe
         }
       }
+
 
       for (var k = 0; k < squares.length; k++){
         if ( ! ( squares[k].hasClass('red') ) ) {   //a qualunque div non sia stata assegnata la classe .red
